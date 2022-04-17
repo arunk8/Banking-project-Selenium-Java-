@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Banking">
-              <span class="suite-name border-passed">Banking</span>
+              <span class="suite-name border-skipped">Banking</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Banking" class="hide-methods passed suite-Banking"> (hide)</a> <!-- hide-methods passed suite-Banking -->
-                      <a href="#" panel-name="suite-Banking" class="show-methods passed suite-Banking"> (show)</a> <!-- show-methods passed suite-Banking -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Banking" class="hide-methods skipped suite-Banking"> (hide)</a> <!-- hide-methods skipped suite-Banking -->
+                      <a href="#" panel-name="suite-Banking" class="show-methods skipped suite-Banking"> (show)</a> <!-- show-methods skipped suite-Banking -->
                     </span>
-                    <div class="method-list-content passed suite-Banking">
+                    <div class="method-list-content skipped suite-Banking">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Banking" title="com.Banking.testCases.TC_LoginTest" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Banking -->
+                    </div> <!-- method-list-content skipped suite-Banking -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Banking" class="panel Banking">
-          <div class="suite-Banking-class-passed">
+          <div class="suite-Banking-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.Banking.testCases.TC_LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,10 +128,29 @@
                   <a name="loginTest">
                   </a> <!-- loginTest -->
                   <span class="method-name">loginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: Unable to receive message from renderer
+  (Session info: chrome=100.0.4896.88)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;DESKTOP-ARUN&apos;, ip: &apos;192.168.2.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7893ae1d098d12e0334f2a91fb5c1eb9, get {url=https://demo.guru99.com/V4/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:51148}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51148/devtoo..., se:cdpVersion: 100.0.4896.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7893ae1d098d12e0334f2a91fb5c1eb9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)
+	at com.Banking.testCases.BaseClass.setUp(BaseClass.java:51)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Banking-class-passed -->
+          </div> <!-- suite-Banking-class-skipped -->
         </div> <!-- panel Banking -->
         <div panel-name="test-xml-Banking" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -192,12 +211,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.Banking.testCases.TC_LoginTest')
-data.setCell(0, 3, 5468);
+data.setCell(0, 3, 1);
 window.suiteTableData['Banking']= { tableData: data, tableDiv: 'times-div-Banking'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-Banking">
               </div> <!-- times-div-Banking -->
             </div> <!-- times-div -->
@@ -225,17 +244,15 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.Banking.testCases.TC_LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">7845 ms</span>
+                <span class="method-start">6390 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">teadDown</span>
-                <span class="method-start">13324 ms</span>
-              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
