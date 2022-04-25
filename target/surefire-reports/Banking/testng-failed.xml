@@ -11,6 +11,7 @@
         <methods>
           <include name="loginTest"/>
           <include name="setUp"/>
+          <include name="teadDown"/>
         </methods>
       </class> <!-- com.Banking.testCases.TC_LoginTest -->
     </classes>
